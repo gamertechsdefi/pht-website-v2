@@ -69,21 +69,21 @@ export default function Home() {
           </div>
 
           {/* Main Content Container */}
-          <div className="relative z-10 w-full h-screen flex flex-col items-center justify-end pb-0">
+          <div className="relative z-10 h-screen flex flex-col justify-end pb-0">
             {/* Character Image with Action Buttons above */}
-            <div className="relative w-full flex items-center justify-center">
-              <div className="relative flex flex-col items-center justify-center w-full h-full">
+            <div className="relative flex justify-center">
+              <div className="relative flex flex-col items-center">
                 <Image
                   src="/images/website_pfp.png"
                   alt="DogeMOB Character"
-                  width={800}
-                  height={800}
+                  width={1600}
+                  height={1600}
                   priority
-                  className="mx-auto w-[180vw] md:w-[40vw] lg:w-[30vw] xl:w-[35vw] h-auto object-contain drop-shadow-2xl"
+                  className="h-[60vh] md:h-[60vh] w-auto object-bottom drop-shadow-2xl"
                 />
-                <div className="absolute left-1/2 bottom-0 -translate-x-1/2 mb-8 flex items-center justify-center w-full">
+                <div className="absolute bottom-0  mb-12 flex items-center justify-center">
                   <a href="/buy" className="px-4 py-2 md:px-8 bg-gradient-to-b from-red-500 to-red-700 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all mr-4">Buy Now</a>
-                  <a href="/chart" className="px-4 py-2 md:px-8 border-2 border-red-500 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all">Check Whitepaper</a>
+                  <a href="/whitepaper.pdf" className="px-4 py-2 md:px-8 border-2 bg-white text-neutral-800 font-bold rounded-xl shadow-lg hover:scale-105 transition-all">Check Whitepaper</a>
                 </div>
                 {/* Glow effect behind character */}
                 <div className="absolute inset-0 bg-gradient-to-t from-red-500/20 via-transparent to-transparent blur-3xl -z-10 scale-110" />
@@ -148,7 +148,7 @@ export default function Home() {
 
         <section className="py-16 flex flex-col items-center">
           <h1 className="text-5xl md:text-6xl text-orange-500 mb-8 text-center font-bold">TAXNOMICS</h1>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             <div className="flex gap-2 items-center">
               <FaCoins className="text-orange-500 text-3xl" />
               <p className="flex flex-col">
@@ -605,7 +605,7 @@ export default function Home() {
                 Explore our comprehensive collection of brand assets, logos, and visual elements.
                 Download high-quality resources for your projects and partnerships with Phoenix Token.
               </p>
-              <Link href="/brand-assets/memes" className="text-white rounded-xl px-4 py-2 md:text:xl font-bold bg-gradient-to-b from-orange-600 to-red-600">GET THEM HERE</Link>
+              <Link href="/memes" className="text-white rounded-xl px-4 py-2 md:text:xl font-bold bg-gradient-to-b from-orange-600 to-red-600">GET THEM HERE</Link>
             </div>
 
             {/* Auto-scrolling Image Gallery */}

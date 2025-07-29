@@ -29,7 +29,6 @@ export const DivOrigami = () => {
           </LogoItem>,
           <LogoItem key={4} className="bg-white text-black">
            <Image src="/images/token-logos/ocicat.png" alt="ocicat token" width={300} height={300} className="w-full h-full" />
-          
           </LogoItem>,
           <LogoItem key={5} className="bg-purple-300 text-neutral-900">
             <Image src="/images/token-logos/yukan.png" alt="yukan token" width={300} height={300} className="w-full h-full" />
@@ -42,6 +41,9 @@ export const DivOrigami = () => {
           </LogoItem>,
           <LogoItem key={8} className="bg-purple-300 text-neutral-900">
             <Image src="/images/token-logos/twc.jpg" alt="tiwi ecosystem" width={300} height={300} className="w-full h-full" />
+          </LogoItem>,
+          <LogoItem key={8} className="bg-purple-300 text-neutral-900">
+            <Image src="/images/token-logos/bengcat.webp" alt="tiwi ecosystem" width={300} height={300} className="w-full h-full" />
           </LogoItem>,
         ]}
       />
