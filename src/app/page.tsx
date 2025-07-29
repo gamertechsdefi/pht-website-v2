@@ -81,7 +81,7 @@ export default function Home() {
                   priority
                   className="h-[60vh] md:h-[60vh] w-auto object-bottom drop-shadow-2xl"
                 />
-                <div className="absolute bottom-0  mb-12 flex items-center justify-center">
+                <div className="absolute bottom-0  mb-16 flex items-center justify-center">
                   <a href="/buy" className="px-4 py-2 md:px-8 bg-gradient-to-b from-red-500 to-red-700 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all mr-4">Buy Now</a>
                   <a href="/whitepaper.pdf" className="px-4 py-2 md:px-8 border-2 bg-white text-neutral-800 font-bold rounded-xl shadow-lg hover:scale-105 transition-all">Check Whitepaper</a>
                 </div>
