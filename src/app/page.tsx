@@ -63,7 +63,7 @@ export default function Home() {
                 THE ORDINARY
               </span>
               <span className="block text-[20vw] xs:text-[18vw] sm:text-[16vw] md:text-[14vw] lg:text-[12vw] xl:text-[10vw] 2xl:text-[8vw] mt-[-0.2em]">
-                MAN'S TOKEN
+                MAN&apos;S TOKEN
               </span>
             </h1>
           </div>
@@ -727,7 +727,7 @@ export default function Home() {
                     <div className="px-6 md:px-8 pb-6 md:pb-8">
                       <div className="border-t border-orange-500/20 pt-6">
                         <p className="text-sm text-neutral-300 leading-relaxed">
-                          A Community Owned project created for the Ordinary Man (everyone), from the ashes of the Phoenix's myth of resilence and transformation.
+                          A Community Owned project created for the Ordinary Man (everyone), from the ashes of the Phoenix&apos;s myth of resilence and transformation.
                         </p>
                       </div>
                     </div>
@@ -762,7 +762,7 @@ export default function Home() {
                       <div className="border-t border-orange-500/20 pt-6">
                         <p className="text-sm text-neutral-300 leading-relaxed">
                           You can purchase Phoenix Token through various decentralized exchanges (DEXs) and centralized exchanges where PHT is listed.
-                          Always ensure you're using official contract addresses and trusted platforms. Check our official website for the latest exchange listings.
+                          Always ensure you&apos;re using official contract addresses and trusted platforms. Check our official website for the latest exchange listings.
                         </p>
                       </div>
                     </div>
@@ -796,7 +796,7 @@ export default function Home() {
                     <div className="px-6 md:px-8 pb-6 md:pb-8">
                       <div className="border-t border-orange-500/20 pt-6">
                         <p className="text-sm text-neutral-300 leading-relaxed">
-                          Phoenix Token has a total supply of 10 million tokens. We've implemented a deflationary mechanism with regular burns,
+                          Phoenix Token has a total supply of 10 million tokens. We&apos;ve implemented a deflationary mechanism with regular burns,
                           including an initial burn of 1 million tokens. This helps maintain scarcity and potential value appreciation over time.
                         </p>
                       </div>
