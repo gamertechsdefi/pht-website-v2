@@ -33,7 +33,7 @@ export default function Home() {
     setActiveSlide(idx);
   };
 
-  const fullAddress = "0x14a8d0AC8Fc456899F2DD33C3f4E32403A78126c";
+  const fullAddress = "0x885c99a787BE6b41cbf964174C771A9f7ec48e04";
   const shortAddress = `${fullAddress.slice(0, 10)}...${fullAddress.slice(-10)}`;
   const handleCopy = () => {
     navigator.clipboard.writeText(fullAddress);
@@ -58,14 +58,14 @@ export default function Home() {
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
           {/* Background Text */}
           <div className="absolute inset-0 flex items-center justify-center z-0">
-            <h1 className="text-center font-bold opacity-5 select-none pointer-events-none whitespace-nowrap text-slate-200 leading-none">
+            <h2 className="text-center font-bold opacity-5 select-none pointer-events-none whitespace-nowrap text-slate-200 leading-none">
               <span className="block text-[20vw] xs:text-[18vw] sm:text-[16vw] md:text-[14vw] lg:text-[12vw] xl:text-[10vw] 2xl:text-[8vw]">
                 THE ORDINARY
               </span>
               <span className="block text-[20vw] xs:text-[18vw] sm:text-[16vw] md:text-[14vw] lg:text-[12vw] xl:text-[10vw] 2xl:text-[8vw] mt-[-0.2em]">
                 MAN&apos;S TOKEN
               </span>
-            </h1>
+            </h2>
           </div>
 
           {/* Main Content Container */}
@@ -116,7 +116,7 @@ export default function Home() {
         </section>
 
         <section className="px-4 md:px-16 py-16">
-          <h1 className="text-4xl md:text-6xl text-orange-500 font-bold mb-8">THE FIRST TRUE MEMEISH AI TOKEN</h1>
+          <h1 className="text-4xl md:text-6xl text-orange-500 font-bold mb-8">THE FIRST TRUE MEME+AI TOKEN</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex flex-col gap-2 bg-neutral-300 border border-orange-500 p-2 rounded-2xl">
               <Image src="/images/burn-pht.jpg" alt="first image" width={500} height={500} className="rounded-2xl" />
@@ -200,7 +200,7 @@ export default function Home() {
           </div>
 
           <div className="p-4 md:p-8 mt-4 bg-orange-500 text-black border-t-2 border-l-2 border-b-6 border-r-6 rounded-lg">
-            <p className="flex items-center gap-2 font-mono">
+            <p className="flex items-center gap-2">
               {/* Mobile (hidden on md and up) */}
               <span className="font-bold text-lg md:hidden">{shortAddress}</span>
 
@@ -249,11 +249,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="min-h-screen flex flex-col w-full max-w-full overflow-x-hidden px-4 md:px-16 py-8 md:py-24 lg:py-32">
+        <section className="min-h-screen flex flex-col w-full max-w-full overflow-x-hidden px-4 md:px-16 py-4 md:py-16 lg:py-24">
           <div className="flex-1 flex flex-col justify-center items-center w-full max-w-full">
             {/* Main Content (Heading + Carousel) */}
             <div className="flex flex-col w-full max-w-full h-full">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-orange-500 mb-6 md:mb-8 tracking-wider font-mono text-center">PARADIGMS IN DEVELOPMENTS</h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-orange-500 mb-6 md:mb-8 tracking-wider text-center">PRODUCTS IN DEVELOPMENTS</h1>
               {/* Carousel */}
               <div className="relative flex flex-col flex-1 w-full max-w-full">
                 <div
@@ -264,34 +264,33 @@ export default function Home() {
                     msOverflowStyle: 'none',
                     scrollbarWidth: 'none',
                     touchAction: 'pan-x',
-                    height: 'calc(100vh - 300px)',
-                    minHeight: '400px',
-                    maxHeight: '550px'
+                    minHeight: '250px',
+                    maxHeight: '350px'
                   }}
                   onScroll={handleScroll}
                   aria-live="polite"
                 >
                   {/* Slide 1 */}
-                  <div className="w-full min-w-full flex-shrink-0 h-full flex flex-col justify-center items-center md:flex-row md:items-center border-2 border-orange-200/60 rounded-3xl p-3 md:p-5 lg:p-6 shadow-2xl snap-center transition-all duration-300 backdrop-blur-xl bg-opacity-80 relative overflow-hidden">
+                  <div className="w-full min-w-full flex-shrink-0 flex flex-col justify-start items-center md:flex-row md:items-center border-2 border-orange-200/60 rounded-3xl px-4 py-8 md:p-4 lg:p-5 shadow-2xl snap-center transition-all duration-300 backdrop-blur-xl bg-opacity-80 relative overflow-hidden h-full">
                     <div className="absolute inset-0 bg-white text-black rounded-3xl pointer-events-none" />
 
                     {/* Mobile: Image and Title in Flex Container */}
                     <div className="flex items-center gap-3 mb-3 md:hidden relative z-10 w-full">
-                      <div className="bg-black rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Image src="/images/firescreener.jpg" alt="FireScreener" width={200} height={200} className="object-contain w-10 h-10 sm:w-12 sm:h-12 rounded-2xl" />
+                      <div className="rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Image src="/images/firescreener.jpg" alt="FireScreener" width={200} height={200} className="object-contain w-18 h-18 md:w-36 md:h-36 rounded-md" />
                       </div>
-                      <h2 className="text-base sm:text-lg font-bold font-mono text-black">FireScreener</h2>
+                      <h2 className="text-base sm:text-lg font-bold text-black">FireScreener</h2>
                     </div>
 
                     {/* Desktop: Product Logo */}
-                    <div className="hidden md:flex bg-black rounded-xl items-center justify-center relative z-10 md:w-1/3 md:min-w-[140px] md:max-w-[180px] lg:max-w-[200px] flex-shrink-0">
-                      <Image src="/images/firescreener.jpg" alt="FireScreener" width={200} height={200} className="object-contain w-20 h-20 lg:w-24 lg:h-24 rounded-2xl" />
+                    <div className="hidden md:flex rounded-xl items-center justify-center relative z-10 md:w-1/3 md:min-w-[140px] md:max-w-[180px] lg:max-w-[200px] flex-shrink-0">
+                      <Image src="/images/firescreener.jpg" alt="FireScreener" width={200} height={200} className="object-contain w-20 h-20 md:w-36 md:h-36 rounded-md" />
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-center relative z-10 text-black md:ml-4 lg:ml-6">
+                    <div className="flex-1 flex flex-col relative z-10 text-black md:ml-4 lg:ml-6">
                       {/* Desktop: Title */}
-                      <h2 className="hidden md:block text-lg lg:text-xl xl:text-2xl font-bold font-mono mb-2 lg:mb-3 text-left">FireScreener</h2>
-                      <p className="text-xs sm:text-sm md:text-sm lg:text-sm font-mono leading-relaxed max-w-2xl text-left mb-2 lg:mb-3">
+                      <h2 className="hidden md:block text-lg lg:text-xl xl:text-2xl font-bold mb-2 lg:mb-3 text-left">FireScreener</h2>
+                      <p className="text-xs sm:text-sm md:text-sm lg:text-sm leading-relaxed max-w-2xl text-left mb-2 lg:mb-3">
                         Born from a meme, fueled by purpose, our token tracking platform delivers
                         a blazing dashboard to monitor and analyze tokens across blockchains. Track
                         real-time token burns, chart market trends, and unlock AI-driven insights.
@@ -302,15 +301,15 @@ export default function Home() {
                     </div>
                   </div>
                   {/* Slide 2 */}
-                  <div className="w-full min-w-full flex-shrink-0 h-full flex flex-col justify-center items-center md:flex-row md:items-center border-2 border-orange-200/60 rounded-3xl p-3 md:p-5 lg:p-6 shadow-2xl snap-center transition-all duration-300 backdrop-blur-xl bg-opacity-80 relative overflow-hidden bg-white text-black">
+                  <div className="w-full min-w-full flex-shrink-0 h-full flex flex-col justify-start items-center md:flex-row md:items-center border-2 border-orange-200/60 rounded-3xl px-4 py-8 md:p-4 lg:p-5 shadow-2xl snap-center transition-all duration-300 backdrop-blur-xl bg-opacity-80 relative overflow-hidden bg-white text-black">
                     <div className="absolute inset-0 bg-white rounded-3xl pointer-events-none" />
 
                     {/* Mobile: Image and Title in Flex Container */}
                     <div className="flex items-center gap-3 mb-3 md:hidden relative z-10 w-full">
                       <div className="flex items-center justify-center flex-shrink-0">
-                        <Image src="/images/rflogo.png" alt="Resurgence Foundation Logo" width={200} height={200} className="object-contain w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-white/30 shadow-lg" />
+                        <Image src="/images/rflogo.png" alt="Resurgence Foundation Logo" width={200} height={200} className="object-contain w-18 h-18 md:w-36 md:h-36 rounded-2xl bg-white/30 shadow-lg" />
                       </div>
-                      <h2 className="text-base sm:text-lg font-bold font-mono text-black">Resurgence Foundation</h2>
+                      <h2 className="text-base sm:text-lg font-bold text-black">Resurgence Foundation</h2>
                     </div>
 
                     {/* Desktop: Product Logo */}
@@ -320,31 +319,31 @@ export default function Home() {
 
                     <div className="flex-1 flex flex-col justify-center relative z-10 md:ml-4 lg:ml-6">
                       {/* Desktop: Title */}
-                      <h2 className="hidden md:block text-lg lg:text-xl xl:text-2xl font-bold font-mono mb-2 lg:mb-3 text-left">Resurgence Foundation</h2>
-                      <p className="text-xs sm:text-sm md:text-sm lg:text-sm font-mono leading-relaxed max-w-2xl text-left mb-2 lg:mb-3">
+                      <h2 className="hidden md:block text-lg lg:text-xl xl:text-2xl font-bold mb-2 lg:mb-3 text-left">Resurgence Foundation</h2>
+                      <p className="text-xs sm:text-sm md:text-sm lg:text-sm  leading-relaxed max-w-2xl text-left mb-2 lg:mb-3">
                         Our mission is to empower individuals by providing them with the resources,
                         opportunities, and support they need to thrive. We are committed to making meaningful charity donations to
                         organizations that create positive change in communities worldwide.
 
                       </p>
                       <div className="flex justify-start">
-                        <a href="https:/resurgencefoundation.org" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 md:px-4 md:py-2 bg-red-600 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-xs md:text-sm">Check us out</a>
+                        <a href="https://www.resurgencefoundation.org" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 md:px-4 md:py-2 bg-red-600 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-xs md:text-sm">Check us out</a>
                       </div>
                     </div>
                   </div>
                   {/* Slide 3 */}
-                  <div className="w-full min-w-full flex-shrink-0 h-full flex flex-col justify-center items-center md:flex-row md:items-center border-2 border-orange-200/60 rounded-3xl p-3 md:p-5 lg:p-6 shadow-2xl snap-center transition-all duration-300 backdrop-blur-xl bg-opacity-80 relative overflow-hidden bg-white text-black">
+                  <div className="w-full min-w-full flex-shrink-0 h-full flex flex-col justify-start items-center md:flex-row md:items-center border-2 border-orange-200/60 rounded-3xl px-4 py-8 md:p-4 lg:p-5 shadow-2xl snap-center transition-all duration-300 backdrop-blur-xl bg-opacity-80 relative overflow-hidden bg-white text-black">
                     <div className="absolute inset-0 bg-white rounded-3xl pointer-events-none" />
 
                     {/* Mobile: Title only (no image for this slide) */}
                     <div className="flex items-center gap-3 mb-3 md:hidden relative z-10 w-full">
-                      <h2 className="text-base sm:text-lg font-bold font-mono text-black">Agent Pyronix</h2>
+                      <h2 className="text-base sm:text-lg font-bold text-black">Agent Pyronix</h2>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-center relative z-10">
+                    <div className="flex-1 flex flex-col relative z-10">
                       {/* Desktop: Title */}
-                      <h2 className="hidden md:block text-lg lg:text-xl xl:text-2xl font-bold font-mono mb-2 lg:mb-3 text-left">Agent Pyronix</h2>
-                      <p className="text-xs sm:text-sm md:text-sm lg:text-sm font-mono leading-relaxed max-w-2xl text-left mb-2 lg:mb-3">
+                      <h2 className="hidden md:block text-lg lg:text-xl xl:text-2xl font-bold mb-2 lg:mb-3 text-left">Agent Pyronix</h2>
+                      <p className="text-xs sm:text-sm md:text-sm lg:text-sm leading-relaxed max-w-2xl text-left mb-2 lg:mb-3">
                         Pyronix stands as a robust and essential tool for anyone
                         involved in the blockchain space. By leveraging advanced
                         AI technologies, it ensures that the blockchain ecosystem
@@ -360,18 +359,18 @@ export default function Home() {
                     </div>
                   </div>
                   {/* Slide 4 */}
-                  <div className="w-full min-w-full flex-shrink-0 h-full flex flex-col justify-center items-center md:flex-row md:items-center border-2 border-orange-200/60 rounded-3xl p-3 md:p-5 lg:p-6 shadow-2xl snap-center transition-all duration-300 backdrop-blur-xl bg-opacity-80 relative overflow-hidden bg-white text-black">
+                  <div className="w-full min-w-full flex-shrink-0 h-full flex flex-col justify-start items-center md:flex-row md:items-center border-2 border-orange-200/60 rounded-3xl px-4 py-8 md:p-4 lg:p-5 shadow-2xl snap-center transition-all duration-300 backdrop-blur-xl bg-opacity-80 relative overflow-hidden bg-white text-black">
                     <div className="absolute inset-0 bg-white rounded-3xl pointer-events-none" />
 
                     {/* Mobile: Title only (no image for this slide) */}
                     <div className="flex items-center gap-3 mb-3 md:hidden relative z-10 w-full">
-                      <h2 className="text-base sm:text-lg font-bold font-mono text-black">Phoenix Swap</h2>
+                      <h2 className="text-base sm:text-lg font-bold text-black">Phoenix Swap</h2>
                     </div>
 
                     <div className="flex-1 flex flex-col justify-center relative z-10">
                       {/* Desktop: Title */}
-                      <h2 className="hidden md:block text-lg lg:text-xl xl:text-2xl font-bold font-mono mb-2 lg:mb-3 text-left">Phoenix Swap</h2>
-                      <p className="text-xs sm:text-sm md:text-sm lg:text-sm font-mono leading-relaxed max-w-2xl text-left mb-2 lg:mb-3">
+                      <h2 className="hidden md:block text-lg lg:text-xl xl:text-2xl font-bold mb-2 lg:mb-3 text-left">Phoenix Swap</h2>
+                      <p className="text-xs sm:text-sm md:text-sm lg:text-sm leading-relaxed max-w-2xl text-left mb-2 lg:mb-3">
                         Phoenix SWAP is revolutionizing the decentralized exchange
                         landscape by integrating advanced AI technologies and
                         cross-chain capabilities. Experience faster, more secure,
@@ -387,7 +386,7 @@ export default function Home() {
                   </div>
                 </div>
                 {/* Slide Indicators */}
-                <div className="flex justify-center items-center gap-3 md:gap-4 mt-6 md:mt-8 pb-4">
+                <div className="flex justify-center items-center gap-3 md:gap-4 mt-4 md:mt-6 pb-2 md:pb-4">
                   {[0, 1, 2, 3].map(idx => (
                     <button
                       key={idx}
@@ -426,7 +425,7 @@ export default function Home() {
           <div className="relative z-10 max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 mb-4 font-mono tracking-wider">
+              <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 mb-4 tracking-wider">
                 ROADMAP
               </h1>
               <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto rounded-full"></div>
@@ -460,7 +459,7 @@ export default function Home() {
                         <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
                           <span className="text-white font-bold text-xl">01</span>
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-orange-400 font-mono">Q1 2025</h3>
+                        <h3 className="text-xl md:text-2xl font-bold text-orange-400">Q1 2025</h3>
                       </div>
                       <ul className="space-y-2 text-neutral-300 text-sm md:text-base">
                         <li className="flex items-center"><span className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>Meme & Thread Contests</li>
@@ -498,7 +497,7 @@ export default function Home() {
                         <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
                           <span className="text-white font-bold text-xl">02</span>
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-orange-400 font-mono">Q2 2025</h3>
+                        <h3 className="text-xl md:text-2xl font-bold text-orange-400">Q2 2025</h3>
                       </div>
                       <ul className="space-y-2 text-neutral-300 text-sm md:text-base">
                         <li className="flex items-center"><span className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>FireScreener Beta Release</li>
@@ -525,7 +524,7 @@ export default function Home() {
                         <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
                           <span className="text-white font-bold text-xl">03</span>
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-orange-400 font-mono">Q3 2025</h3>
+                        <h3 className="text-xl md:text-2xl font-bold text-orange-400">Q3 2025</h3>
                       </div>
                       <ul className="space-y-2 text-neutral-300 text-sm md:text-base">
                         <li className="flex items-center"><span className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>Listing on CoinGecko</li>
@@ -563,7 +562,7 @@ export default function Home() {
                         <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
                           <span className="text-white font-bold text-xl">04</span>
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-orange-400 font-mono">Q4 2025</h3>
+                        <h3 className="text-xl md:text-2xl font-bold text-orange-400">Q4 2025</h3>
                       </div>
                       <ul className="space-y-2 text-neutral-300 text-sm md:text-base">
                         <li className="flex items-center"><span className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>FireScreener v4 Release</li>
@@ -598,7 +597,7 @@ export default function Home() {
           <div className="relative z-10 max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12 md:mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 mb-4 font-mono tracking-wider">
+              <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 mb-4 tracking-wider">
                 BRAND ASSETS
               </h1>
 
@@ -691,7 +690,7 @@ export default function Home() {
           <div className="relative z-10 max-w-4xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12 md:mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 mb-4 font-mono tracking-wider">
+              <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 mb-4 tracking-wider">
                 FAQ
               </h1>
               <p className="text-neutral-300 max-w-2xl mx-auto leading-relaxed">
@@ -712,7 +711,7 @@ export default function Home() {
                     className={`w-full px-6 md:px-8 py-6 md:py-8 text-left flex items-center justify-between transition-all duration-300 ${openFAQ === 0 ? 'bg-orange-500/10' : 'hover:bg-orange-500/5'
                       }`}
                   >
-                    <h3 className="text-sm md:text-lg font-bold text-orange-400 font-mono pr-4">What is Phoenix Token (PHT)?</h3>
+                    <h3 className="text-sm md:text-lg font-bold text-orange-400 pr-4">What is Phoenix Token (PHT)?</h3>
                     <div className={`flex-shrink-0 w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center transition-all duration-300 ${openFAQ === 0
                         ? 'bg-orange-500/40 rotate-45'
                         : 'hover:bg-orange-500/30'
@@ -746,7 +745,7 @@ export default function Home() {
                     className={`w-full px-6 md:px-8 py-6 md:py-8 text-left flex items-center justify-between transition-all duration-300 ${openFAQ === 1 ? 'bg-orange-500/10' : 'hover:bg-orange-500/5'
                       }`}
                   >
-                    <h3 className="text-sm md:text-lg font-bold text-orange-400 font-mono pr-4">How can I buy Phoenix Token?</h3>
+                    <h3 className="text-sm md:text-lg font-bold text-orange-400 pr-4">How can I buy Phoenix Token?</h3>
                     <div className={`flex-shrink-0 w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center transition-all duration-300 ${openFAQ === 1
                         ? 'bg-orange-500/40 rotate-45'
                         : 'hover:bg-orange-500/30'
@@ -781,7 +780,7 @@ export default function Home() {
                     className={`w-full px-6 md:px-8 py-6 md:py-8 text-left flex items-center justify-between transition-all duration-300 ${openFAQ === 2 ? 'bg-orange-500/10' : 'hover:bg-orange-500/5'
                       }`}
                   >
-                    <h3 className="text-sm md:text-lg font-bold text-orange-400 font-mono pr-4">What is the total supply of PHT?</h3>
+                    <h3 className="text-sm md:text-lg font-bold text-orange-400 pr-4">What is the total supply of PHT?</h3>
                     <div className={`flex-shrink-0 w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center transition-all duration-300 ${openFAQ === 2
                         ? 'bg-orange-500/40 rotate-45'
                         : 'hover:bg-orange-500/30'
@@ -815,7 +814,7 @@ export default function Home() {
                     className={`w-full px-6 md:px-8 py-6 md:py-8 text-left flex items-center justify-between transition-all duration-300 ${openFAQ === 3 ? 'bg-orange-500/10' : 'hover:bg-orange-500/5'
                       }`}
                   >
-                    <h3 className="text-sm md:text-lg font-bold text-orange-400 font-mono pr-4">Why are we pushing for Artificial Intelligence?</h3>
+                    <h3 className="text-sm md:text-lg font-bold text-orange-400 pr-4">Why are we pushing for Artificial Intelligence?</h3>
                     <div className={`flex-shrink-0 w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center transition-all duration-300 ${openFAQ === 3
                         ? 'bg-orange-500/40 rotate-45'
                         : 'hover:bg-orange-500/30'
@@ -853,7 +852,7 @@ export default function Home() {
                     className={`w-full px-6 md:px-8 py-6 md:py-8 text-left flex items-center justify-between transition-all duration-300 ${openFAQ === 4 ? 'bg-orange-500/10' : 'hover:bg-orange-500/5'
                       }`}
                   >
-                    <h3 className="text-sm md:text-lg font-bold text-orange-400 font-mono pr-4">What makes Phoenix Token different?</h3>
+                    <h3 className="text-sm md:text-lg font-bold text-orange-400 pr-4">What makes Phoenix Token different?</h3>
                     <div className={`flex-shrink-0 w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center transition-all duration-300 ${openFAQ === 4
                         ? 'bg-orange-500/40 rotate-45'
                         : 'hover:bg-orange-500/30'
@@ -888,7 +887,7 @@ export default function Home() {
                     className={`w-full px-6 md:px-8 py-6 md:py-8 text-left flex items-center justify-between transition-all duration-300 ${openFAQ === 5 ? 'bg-orange-500/10' : 'hover:bg-orange-500/5'
                       }`}
                   >
-                    <h3 className="text-lg md:text-xl font-bold text-orange-400 font-mono pr-4">How can I stay updated with Phoenix Token?</h3>
+                    <h3 className="text-sm md:text-lg font-bold text-orange-400 pr-4">How can I stay updated with Phoenix Token?</h3>
                     <div className={`flex-shrink-0 w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center transition-all duration-300 ${openFAQ === 5
                         ? 'bg-orange-500/40 rotate-45'
                         : 'hover:bg-orange-500/30'
@@ -902,7 +901,7 @@ export default function Home() {
                     } overflow-hidden`}>
                     <div className="px-6 md:px-8 pb-6 md:pb-8">
                       <div className="border-t border-orange-500/20 pt-6">
-                        <p className="text-neutral-300 leading-relaxed">
+                        <p className="text-sm text-neutral-300 leading-relaxed">
                           Follow our official social media channels, join our community Discord/Telegram, and subscribe to our newsletter.
                           We regularly share updates about new features, partnerships, roadmap progress, and important announcements across all our platforms.
                         </p>
@@ -922,7 +921,7 @@ export default function Home() {
                     className={`w-full px-6 md:px-8 py-6 md:py-8 text-left flex items-center justify-between transition-all duration-300 ${openFAQ === 6 ? 'bg-orange-500/10' : 'hover:bg-orange-500/5'
                       }`}
                   >
-                    <h3 className="text-sm md:text-lg font-bold text-orange-400 font-mono pr-4">How can I contribute to the growth of the project?</h3>
+                    <h3 className="text-sm md:text-lg font-bold text-orange-400 pr-4">How can I contribute to the growth of the project?</h3>
                     <div className={`flex-shrink-0 w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center transition-all duration-300 ${openFAQ === 6
                         ? 'bg-orange-500/40 rotate-45'
                         : 'hover:bg-orange-500/30'

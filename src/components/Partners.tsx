@@ -15,7 +15,7 @@ interface LogoItemProps {
 export const DivOrigami = () => {
   return (
     <section className="flex flex-col items-center justify-center gap-12 bg-white px-4 py-24 md:flex-row">
-        <h1 className="text-4xl md:text-7xl font-bold text-orange-500">OUR PARTNERS</h1>
+        <h1 className="text-5xl text-center md:text-7xl font-bold text-orange-500">OUR PARTNERS</h1>
       <LogoRolodex
         items={[
           <LogoItem key={1} className="bg-neutral-800 text-neutral-900">

@@ -1,19 +1,24 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Cascadia_Mono } from "next/font/google";
+import { Space_Grotesk, Orbitron, Fuzzy_Bubbles } from "next/font/google";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["300", "500", "700"],
   variable: "--font-space-grotesk",
+})
 
-});
-
-const cascadiaMono = Cascadia_Mono({
+const orbitron = Orbitron({
   subsets: ["latin"],
-  weight: ["300", "500", "700"],
-  variable: "--font-cascadia-mono",
-});
+  weight: ["700"],
+  variable: "--font-orbitron",
+})
+
+const fuzzyBubbles = Fuzzy_Bubbles({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-fuzzy-bubbles",   
+})
 
 
 export const metadata: Metadata = {
@@ -29,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cascadiaMono.variable} ${spaceGrotesk.variable}  antialiased`}
+        className={`${spaceGrotesk.variable} ${orbitron.variable} ${fuzzyBubbles.variable} antialiased`}
       >
         {children}
       </body>

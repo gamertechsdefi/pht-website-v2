@@ -4,13 +4,13 @@
 body {
   background: #250000;
   color: white;
-  font-family: var(--font-cascadia-mono);
-}
-
-h1 {
   font-family: var(--font-space-grotesk);
 }
 
+h1 {
+  font-family: var(--font-fuzzy-bubbles);
+}
+
 h2, h3, h4 {
-  font-family: var(--font-cascadia-mono);
+  font-family: var(--font-space-grotesk);
 }
