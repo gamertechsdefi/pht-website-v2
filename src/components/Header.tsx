@@ -15,13 +15,13 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems: NavItem[] = [
-    { label: 'About', href: '/about' },
-    { label: 'Partners', href: '/partners' },
-    { label: 'Tokenomics', href: '/tokenomics' },
+    { label: 'About', href: '#about' },
+    { label: 'Partners', href: '#partners' },
+    { label: 'Tokenomics', href: '#tokenomics' },
     { label: 'DogeMOB', href: '/', isLogo: true },
-    { label: 'Products', href: '/products' },
-    { label: 'Roadmap', href: '/roadmap' },
-    { label: 'Buy Now', href: '/buy' },
+    { label: 'Products', href: '#products' },
+    { label: 'Roadmap', href: '#roadmap' },
+    { label: 'Buy Now', href: 'https://pancakeswap.finance/swap?outputCurrency=0x885c99a787BE6b41cbf964174C771A9f7ec48e04' },
   ];
 
   return (
@@ -119,13 +119,13 @@ const Header: React.FC = () => {
 
       {/* Mobile Fullscreen Menu Overlay */}
       <motion.div
-        className={`fixed inset-0 min-h-screen z-50 bg-red-800 flex items-center justify-center md:hidden ${menuOpen ? '' : 'pointer-events-none'}`}
+        className={`fixed inset-0 min-h-screen z-50 bg-red-950 flex items-center justify-center md:hidden ${menuOpen ? '' : 'pointer-events-none'}`}
         initial={{ scale: 0.8, opacity: 0 }}
         animate={menuOpen ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
         transition={{ duration: 0.4, ease: 'easeOut' }}
       >
         <button
-          className="absolute top-6 right-6 p-2 rounded-full bg-red-500 text-white"
+          className="absolute top-6 right-6 p-2 rounded-full bg-red-950 text-white"
           aria-label="Close menu"
           onClick={() => setMenuOpen(false)}
         >

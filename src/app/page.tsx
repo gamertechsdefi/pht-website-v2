@@ -82,7 +82,7 @@ export default function Home() {
                   className="h-[60vh] md:h-[60vh] w-auto object-bottom drop-shadow-2xl"
                 />
                 <div className="absolute bottom-0  mb-16 flex items-center justify-center">
-                  <a href="/buy" className="px-4 py-2 md:px-8 bg-gradient-to-b from-red-500 to-red-700 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all mr-4">Buy Now</a>
+                  <a href="https://pancakeswap.finance/swap?outputCurrency=0x885c99a787BE6b41cbf964174C771A9f7ec48e04" className="px-4 py-2 md:px-8 bg-gradient-to-b from-red-500 to-red-700 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all mr-4">Buy Now</a>
                   <a href="/whitepaper.pdf" className="px-4 py-2 md:px-8 border-2 bg-white text-neutral-800 font-bold rounded-xl shadow-lg hover:scale-105 transition-all">Check Whitepaper</a>
                 </div>
                 {/* Glow effect behind character */}
@@ -104,7 +104,7 @@ export default function Home() {
         </section>
         {/* 
         about section */}
-        <section className="px-4 mx-4 md:mx-16 py-16 md:py-24">
+        <section className="px-4 mx-4 md:mx-16 py-16 md:py-24" id="about">
           <div className="px-4 md:px-12 py-8 md:py-8 border border-orange-500 rounded-xl p-4">
             <h1 className="text-4xl md:text-5xl text-orange-500 font-bold text-center mb-8">ABOUT PHOENIX TOKEN</h1>
             <p className="text-md md:text-lg text-center text-neutral-300">
@@ -142,11 +142,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
+        <section id="partners">
           <DivOrigami />
         </section>
 
-        <section className="py-16 flex flex-col items-center">
+        <section className="py-16 flex flex-col items-center" id="tokenomics">
           <h1 className="text-5xl md:text-6xl text-orange-500 mb-8 text-center font-bold">TAXNOMICS</h1>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             <div className="flex gap-2 items-center">
@@ -249,7 +249,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="min-h-screen flex flex-col w-full max-w-full overflow-x-hidden px-4 md:px-16 py-4 md:py-16 lg:py-24">
+        <section id="products" className="min-h-screen flex flex-col w-full max-w-full overflow-x-hidden px-4 md:px-16 py-4 md:py-16 lg:py-24">
           <div className="flex-1 flex flex-col justify-center items-center w-full max-w-full">
             {/* Main Content (Heading + Carousel) */}
             <div className="flex flex-col w-full max-w-full h-full">
@@ -402,7 +402,7 @@ export default function Home() {
         </section>
 
         {/* roadmap section */}
-        <section className="py-16 md:py-24 px-4 md:px-16 bg-[#150000] relative overflow-hidden">
+        <section id="roadmap" className="py-16 md:py-24 px-4 md:px-16 bg-[#150000] relative overflow-hidden">
           {/* Background AI Grid Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0" style={{
@@ -594,11 +594,11 @@ export default function Home() {
             `
           }} />
 
-          <div className="relative z-10 max-w-7xl mx-auto">
+          <div id="meme-assets" className="relative z-10 max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12 md:mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 mb-4 tracking-wider">
-                BRAND ASSETS
+                MEME ASSETS
               </h1>
 
               <p className="max-w-3xl mx-auto leading-relaxed mb-4">
