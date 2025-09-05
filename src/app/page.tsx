@@ -296,7 +296,7 @@ export default function Home() {
                         real-time token burns, chart market trends, and unlock AI-driven insights.
                       </p>
                       <div className="flex justify-start">
-                        <a href="https://tracker.phoenixtoken.community" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 md:px-4 md:py-2 bg-red-600 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-xs md:text-sm">Visit FireScreener</a>
+                        <a href="https://firescreener.com" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 md:px-4 md:py-2 bg-red-600 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all text-xs md:text-sm">Visit FireScreener</a>
                       </div>
                     </div>
                   </div>
