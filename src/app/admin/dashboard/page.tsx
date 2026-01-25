@@ -39,7 +39,7 @@ export default function AdminDashboard() {
             <h2 className="text-xl font-semibold text-gray-800">
                 Welcome back, {user?.displayName?.split(" ")[0] || "Admin"}! 👋
             </h2>
-            <p className="text-gray-500 mt-1">Here's what's happening with your content today.</p>
+            <p className="text-gray-500 mt-1">Here&apos;s what&apos;s happening with your content today.</p>
         </div>
 
         {/* Stats Grid */}
