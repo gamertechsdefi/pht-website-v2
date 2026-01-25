@@ -59,6 +59,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       
       await signInWithPopup(auth, provider);
       // Success is handled by onIdTokenChanged
+      /* eslint-disable @typescript-eslint/no-explicit-any */
     } catch (error: any) {
       console.error("Login failed", error);
       if (error.code === 'auth/popup-blocked') {
