@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Orbitron, Fuzzy_Bubbles } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
+import { AuthProvider } from "@/context/AuthContext";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -36,7 +38,10 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${orbitron.variable} ${fuzzyBubbles.variable} antialiased`}
       >
-        {children}
+        <AuthProvider>
+          <Toaster position="top-right" />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
