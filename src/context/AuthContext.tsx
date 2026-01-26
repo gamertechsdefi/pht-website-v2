@@ -59,7 +59,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       
       await signInWithPopup(auth, provider);
       // Success is handled by onIdTokenChanged
-      /* eslint-disable @typescript-eslint/no-explicit-any */
     } catch (error: any) {
       console.error("Login failed", error);
       if (error.code === 'auth/popup-blocked') {
@@ -79,7 +78,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       // Call server route to strictly clear the cookie
       await fetch("/api/clear-session");
       toast.success("Signed out");
-      router.push("/login");
+      router.push("/admin-login");
     } catch (error) {
       console.error("Logout failed", error);
     }

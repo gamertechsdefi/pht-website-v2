@@ -24,7 +24,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
                     <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center">
                         <Zap className="h-5 w-5 text-white" fill="currentColor" />
                     </div>
-                    <span className="font-bold text-lg tracking-wide text-gray-900">Zuva Admin</span>
+                    <span className="font-bold text-lg tracking-wide text-gray-900">PHT Admin</span>
                 </div>
                 <button 
                     onClick={() => setIsSidebarOpen(true)}

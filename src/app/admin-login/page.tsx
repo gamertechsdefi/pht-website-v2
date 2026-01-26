@@ -3,7 +3,6 @@
 import { useAuth } from "@/context/AuthContext";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
 export default function LoginPage() {
   const { user, signInWithGoogle, loading } = useAuth();
@@ -28,16 +27,16 @@ export default function LoginPage() {
       <div className="w-full max-w-md space-y-8 bg-white p-10 rounded-2xl shadow-xl">
         <div className="text-center">
           <div className="mx-auto h-16 w-16 bg-gradient-to-tr from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
-            <Image src="/images/token-logos/pht.png" alt="Logo" width={64} height={64} className="rounded-md" />
+             <span className="text-2xl">⚡</span>
           </div>
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-            PHT Blog Admin Portal
+            Zuva Admin Portal
           </h2>
           <p className="mt-2 text-sm text-gray-600">
             For authorized personnel only.
           </p>
         </div>
-
+        
         <div className="mt-8 space-y-6">
           <button
             onClick={signInWithGoogle}
@@ -68,7 +67,7 @@ export default function LoginPage() {
         </div>
 
         <div className="mt-6 text-center text-xs text-gray-500">
-          Protected by Google Cloud Identity & Cloud Firestore.
+           Protected by Google Cloud Identity & Cloud Firestore.
         </div>
       </div>
     </div>
