@@ -8,11 +8,15 @@ export default function LoginPage() {
   const { user, signInWithGoogle, loading } = useAuth();
   const router = useRouter();
 
-  useEffect(() => {
+useEffect(() => {
+  const timer = setTimeout(() => {
     if (user && !loading) {
       router.push("/admin/dashboard");
     }
-  }, [user, loading, router]);
+  }, 400);
+
+  return () => clearTimeout(timer);
+}, [user, loading, router]);
 
   if (loading) {
     return (
