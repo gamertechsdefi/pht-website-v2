@@ -7,5 +7,5 @@ export async function GET(request: NextRequest) {
   (await cookies()).delete("session");
   
   // Redirect to login page
-  return NextResponse.redirect(new URL("/login", request.url));
+  return NextResponse.redirect(new URL("/admin-login", request.url));
 }
