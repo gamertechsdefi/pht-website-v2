@@ -7,10 +7,14 @@ export async function middleware(request: NextRequest) {
   if (!session && request.nextUrl.pathname.startsWith("/admin")) {
     return NextResponse.redirect(new URL("/admin-login", request.url));
   }
-
-  if (session && request.nextUrl.pathname === "/admin-login") {
+  else {
     return NextResponse.redirect(new URL("/admin/dashboard", request.url));
+
   }
+
+  // if (session && request.nextUrl.pathname === "/admin-login") {
+    
+  // }
 
   return NextResponse.next();
 }
