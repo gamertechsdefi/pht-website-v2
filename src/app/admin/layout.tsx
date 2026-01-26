@@ -30,13 +30,13 @@ export default async function AdminLayout({
 
     if (!adminDoc.exists) {
       console.warn(`Unauthorized access attempt by: ${email}`);
-      redirect("/admin-login?error=unauthorized"); 
+      redirect("/admin-login?error=unauthorized");
     }
 
     // Access Granted - Render Responsive Shell
     return (
       <AdminShell>
-          {children}
+        {children}
       </AdminShell>
     );
 

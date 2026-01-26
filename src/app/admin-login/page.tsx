@@ -1,24 +1,19 @@
 "use client";
 
 import { useAuth } from "@/context/AuthContext";
-import { useEffect, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-// Separate component that uses useSearchParams
-function LoginContent() {
+export default function LoginPage() {
   const { user, signInWithGoogle, loading } = useAuth();
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const error = searchParams.get("error");
 
   useEffect(() => {
-    // If there is an error (like unauthorized), do NOT redirect even if user is present.
-    // This breaks the loop.
-    if (user && !loading && !error) {
+    if (user && !loading) {
       router.push("/admin/dashboard");
     }
-  }, [user, loading, router, error]);
+  }, [user, loading, router]);
 
   if (loading) {
     return (
@@ -33,7 +28,7 @@ function LoginContent() {
       <div className="w-full max-w-md space-y-8 bg-white p-10 rounded-2xl shadow-xl">
         <div className="text-center">
           <div className="mx-auto h-16 w-16 bg-gradient-to-tr from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
-            <Image src="/logo.png" alt="Logo" width={64} height={64} />
+            <Image src="/images/token-logos/pht.png" alt="Logo" width={64} height={64} className="rounded-md" />
           </div>
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
             PHT Blog Admin Portal
@@ -41,12 +36,6 @@ function LoginContent() {
           <p className="mt-2 text-sm text-gray-600">
             For authorized personnel only.
           </p>
-
-          {error === "unauthorized" && (
-            <div className="mt-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded-md text-sm">
-              <strong>Access Denied:</strong> Your account is not authorized to access the admin dashboard.
-            </div>
-          )}
         </div>
 
         <div className="mt-8 space-y-6">
@@ -83,13 +72,5 @@ function LoginContent() {
         </div>
       </div>
     </div>
-  );
-}
-
-export default function LoginPage() {
-  return (
-    <Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-gray-50"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div></div>}>
-      <LoginContent />
-    </Suspense>
   );
 }
