@@ -1,11 +1,12 @@
 "use client";
 
 import { useAuth } from "@/context/AuthContext";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 
-export default function LoginPage() {
+// Separate component that uses useSearchParams
+function LoginContent() {
   const { user, signInWithGoogle, loading } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -82,5 +83,13 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-gray-50"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div></div>}>
+      <LoginContent />
+    </Suspense>
   );
 }
