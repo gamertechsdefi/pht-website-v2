@@ -21,6 +21,13 @@ export interface NewsArticle {
   content: string; // Markdown
   imageUrl?: string;
   category?: string; // New field
+  slug: string; // URL friendly identifier
+  tags: string[];
+  seo?: {
+    metaTitle?: string;
+    metaDescription?: string;
+    keywords?: string[];
+  };
   author: {
     email: string;
     name?: string;
@@ -85,18 +92,49 @@ export class NewsService {
     }
   }
 
-  // Get single article
+  // Get single article by ID
   static async getById(id: string): Promise<NewsArticle | null> {
     try {
       const docRef = doc(db, NewsService.collectionName, id);
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {
-        return { id: docSnap.id, ...docSnap.data() } as NewsArticle;
+        const data = docSnap.data() as NewsArticle;
+        // Backfill slug if missing (using ID as fallback slug)
+        if (!data.slug) {
+          data.slug = data.id;
+        }
+        return { ...data, id: docSnap.id };
       }
       return null;
     } catch (error) {
       console.error("Error fetching article:", error);
+      throw error;
+    }
+  }
+
+  // Get single article by Slug
+  static async getBySlug(slug: string): Promise<NewsArticle | null> {
+    try {
+      // First try to find by slug field
+      const q = query(
+        collection(db, NewsService.collectionName),
+        where("slug", "==", slug),
+        where("isPublished", "==", true)
+      );
+      const snapshot = await getDocs(q);
+
+      if (!snapshot.empty) {
+        const doc = snapshot.docs[0];
+        return { id: doc.id, ...doc.data() } as NewsArticle;
+      }
+
+      // Fallback: Check if it's an ID (legacy support)
+      // This is optional but good if migration isn't perfect
+      return await NewsService.getById(slug);
+
+    } catch (error) {
+      console.error("Error fetching article by slug:", error);
       throw error;
     }
   }
@@ -108,6 +146,9 @@ export class NewsService {
       const docRef = await addDoc(collection(db, NewsService.collectionName), {
         ...article,
         category: article.category || "General",
+        slug: article.slug || article.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, ""),
+        tags: article.tags || [],
+        seo: article.seo || {},
         createdAt: now,
         publishedAt: now,
       });

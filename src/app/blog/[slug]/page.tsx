@@ -15,7 +15,7 @@ export default function BlogPostPage() {
     const params = useParams();
     const router = useRouter();
     const { slug } = params;
-    // Assuming slug IS the ID for now as per plan. 
+    // Slug is now the actual slug field, or falling back to ID if not found in updated getBySlug
     // In a real SEO optimized app, we would query by slug field.
 
     const [post, setPost] = useState<NewsArticle | null>(null);
@@ -25,7 +25,7 @@ export default function BlogPostPage() {
         const fetchPost = async () => {
             if (!slug) return;
             try {
-                const data = await NewsService.getById(slug as string);
+                const data = await NewsService.getBySlug(slug as string);
                 if (!data) {
                     router.push("/blog"); // Redirect if not found
                     return;
