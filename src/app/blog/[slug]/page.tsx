@@ -103,10 +103,27 @@ export default function BlogPostPage() {
                     )}
                 </header>
 
-                <div className="prose prose-invert prose-lg max-w-none prose-headings:text-orange-500 prose-a:text-orange-500 hover:prose-a:text-orange-400 prose-strong:text-white prose-blockquote:border-l-orange-500 prose-blockquote:bg-orange-500/10 prose-blockquote:py-2 prose-blockquote:pr-4 prose-img:rounded-2xl">
-                    <ReactMarkdown>{post.content}</ReactMarkdown>
+                <div className="max-w-none text-neutral-200">
+                    <ReactMarkdown
+                        components={{
+                            h1: ({ node, ...props }) => <h1 className="text-white text-3xl md:text-4xl font-bold mb-6 mt-8 leading-tight" {...props} />,
+                            h2: ({ node, ...props }) => <h2 className="text-white text-2xl md:text-3xl font-bold mb-4 mt-8 leading-tight" {...props} />,
+                            h3: ({ node, ...props }) => <h3 className="text-white text-xl md:text-2xl font-bold mb-4 mt-6 leading-snug" {...props} />,
+                            p: ({ node, ...props }) => <p className="mb-6 font-light leading-relaxed text-lg text-neutral-200" {...props} />,
+                            ul: ({ node, ...props }) => <ul className="list-disc ml-6 mb-6 space-y-2 text-neutral-200" {...props} />,
+                            ol: ({ node, ...props }) => <ol className="list-decimal ml-6 mb-6 space-y-2 text-neutral-200" {...props} />,
+                            li: ({ node, ...props }) => <li className="pl-1" {...props} />,
+                            strong: ({ node, ...props }) => <strong className="text-white font-bold" {...props} />,
+                            blockquote: ({ node, ...props }) => <blockquote className="border-l-4 border-orange-500 pl-4 py-2 my-6 italic bg-orange-500/10 rounded-r-lg text-neutral-300" {...props} />,
+                            a: ({ node, ...props }) => <a className="text-orange-500 hover:text-orange-400 font-medium hover:underline transition-colors" {...props} />,
+                            img: ({ node, ...props }) => <img className="rounded-2xl my-8 w-full border border-orange-500/20" {...props} />,
+                            code: ({ node, ...props }) => <code className="bg-black/30 text-orange-400 px-1.5 py-0.5 rounded font-mono text-sm border border-orange-500/20" {...props} />,
+                            pre: ({ node, ...props }) => <pre className="bg-black/50 p-4 rounded-xl overflow-x-auto mb-6 border border-orange-500/20" {...props} />,
+                        }}
+                    >
+                        {post.content}
+                    </ReactMarkdown>
                 </div>
-
             </article>
 
             <Footer />
