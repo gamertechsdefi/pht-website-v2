@@ -175,7 +175,7 @@ export function NewsForm({ initialData }: NewsFormProps) {
             <input
               type="checkbox"
               id="published"
-              className="h-4 w-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500"
+              className="h-4 w-4 text-orange-600 rounded border-gray-300 focus:ring-orange-500"
               {...register("isPublished")}
             />
             <label htmlFor="published" className="text-sm font-medium text-gray-700">Publish Immediately</label>
@@ -184,7 +184,7 @@ export function NewsForm({ initialData }: NewsFormProps) {
           <button
             type="submit"
             disabled={loading}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium flex items-center gap-2 disabled:opacity-50"
+            className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-medium flex items-center gap-2 disabled:opacity-50"
           >
             {loading && <Loader2 className="h-4 w-4 animate-spin" />}
             {initialData ? "Update" : "Publish"}
@@ -202,7 +202,7 @@ export function NewsForm({ initialData }: NewsFormProps) {
             <input
               {...register("title", { required: "Title is required" })}
               onChange={handleTitleChange}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all font-semibold text-lg placeholder:text-gray-400 text-gray-900"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all font-semibold text-lg placeholder:text-gray-400 text-gray-900"
               placeholder="Enter catchy headline..."
             />
             {errors.title && <p className="text-red-500 text-xs mt-1">{errors.title.message}</p>}
@@ -214,14 +214,14 @@ export function NewsForm({ initialData }: NewsFormProps) {
               <label className="block text-sm font-medium text-gray-700 mb-1">Slug (URL)</label>
               <input
                 {...register("slug", { required: "Slug is required" })}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-sm font-mono text-gray-600 bg-gray-50"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm font-mono text-gray-600 bg-gray-50"
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
               <select
                 {...register("category")}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-sm bg-white text-gray-900"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm bg-white text-gray-900"
               >
                 <option value="General">General</option>
                 <option value="Updates">Updates</option>
@@ -238,7 +238,7 @@ export function NewsForm({ initialData }: NewsFormProps) {
             <textarea
               {...register("excerpt", { required: "Excerpt is required" })}
               rows={2}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-sm text-gray-900 placeholder:text-gray-400"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm text-gray-900 placeholder:text-gray-400"
               placeholder="Brief summary for the card view..."
             />
           </div>
@@ -263,14 +263,14 @@ export function NewsForm({ initialData }: NewsFormProps) {
                 <button
                   type="button"
                   onClick={() => setIsPreviewMode(false)}
-                  className={clsx("flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-md transition-colors", !isPreviewMode ? "bg-white shadow text-indigo-600" : "text-gray-500 hover:text-gray-700")}
+                  className={clsx("flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-md transition-colors", !isPreviewMode ? "bg-white shadow text-orange-600" : "text-gray-500 hover:text-gray-700")}
                 >
                   <Layout className="h-3 w-3" /> Write
                 </button>
                 <button
                   type="button"
                   onClick={() => setIsPreviewMode(true)}
-                  className={clsx("flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-md transition-colors", isPreviewMode ? "bg-white shadow text-indigo-600" : "text-gray-500 hover:text-gray-700")}
+                  className={clsx("flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-md transition-colors", isPreviewMode ? "bg-white shadow text-orange-600" : "text-gray-500 hover:text-gray-700")}
                 >
                   <Eye className="h-3 w-3" /> Preview
                 </button>
@@ -285,7 +285,7 @@ export function NewsForm({ initialData }: NewsFormProps) {
                   placeholder="# Write your masterpiece here..."
                 />
               ) : (
-                <div className="prose prose-indigo max-w-none p-6 h-full overflow-auto bg-white rounded-xl">
+                <div className="prose prose-orange max-w-none p-6 h-full overflow-auto bg-white rounded-xl">
                   <ReactMarkdown
                     components={{
                       h1: ({ node, ...props }) => <h1 className="text-gray-900 text-3xl font-bold mb-4 mt-2 !important" {...props} />,
@@ -297,7 +297,7 @@ export function NewsForm({ initialData }: NewsFormProps) {
                       li: ({ node, ...props }) => <li className="text-gray-800 pl-1 !important" {...props} />,
                       strong: ({ node, ...props }) => <strong className="text-gray-900 font-bold !important" {...props} />,
                       blockquote: ({ node, ...props }) => <blockquote className="text-gray-600 border-l-4 border-gray-300 pl-4 py-1 my-4 italic bg-gray-50 rounded-r-lg" {...props} />,
-                      a: ({ node, ...props }) => <a className="text-indigo-600 hover:underline font-medium" {...props} />,
+                      a: ({ node, ...props }) => <a className="text-orange-600 hover:underline font-medium" {...props} />,
                     }}
                   >
                     {content || "*Nothing to preview*"}
@@ -354,7 +354,7 @@ export function NewsForm({ initialData }: NewsFormProps) {
               value={tagsInput}
               onChange={(e) => setTagsInput(e.target.value)}
               onKeyDown={handleAddTag}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-sm"
               placeholder="Add tags (Press Enter)..."
             />
           </div>
@@ -367,7 +367,7 @@ export function NewsForm({ initialData }: NewsFormProps) {
                 <label className="text-xs text-gray-500 mb-1 block">Meta Title</label>
                 <input
                   {...register("seo.metaTitle")}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 text-sm"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 text-sm"
                   placeholder="SEO Title (defaults to title)"
                 />
               </div>
@@ -376,7 +376,7 @@ export function NewsForm({ initialData }: NewsFormProps) {
                 <textarea
                   {...register("seo.metaDescription")}
                   rows={3}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 text-sm"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 text-sm"
                   placeholder="Brief description for search engines..."
                 />
               </div>
@@ -390,7 +390,7 @@ export function NewsForm({ initialData }: NewsFormProps) {
               {user?.photoURL ? (
                 <img src={user.photoURL} className="h-10 w-10 rounded-full" />
               ) : (
-                <div className="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
                   {user?.email?.[0]}
                 </div>
               )}

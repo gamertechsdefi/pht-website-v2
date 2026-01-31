@@ -53,10 +53,10 @@ export default function NewsListPage() {
       <main className="flex-1 p-6 overflow-auto">
         {/* Actions */}
         <div className="mb-6 flex justify-between items-center">
-          <p className="text-gray-500 text-sm">Manage your blog posts and announcements.</p>
+          <p className="text-neutral-500 text-sm">Manage your blog posts and announcements.</p>
           <Link 
             href="/admin/news/create"
-            className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+            className="flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
           >
             <Plus className="h-4 w-4" />
             Create Article
@@ -66,15 +66,15 @@ export default function NewsListPage() {
         {/* Content */}
         {loading ? (
           <div className="flex justify-center py-12">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600" />
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600" />
           </div>
         ) : news.length === 0 ? (
-          <div className="text-center py-12 bg-white rounded-xl border border-gray-200 border-dashed">
-            <div className="mx-auto h-12 w-12 text-gray-400 bg-gray-50 rounded-full flex items-center justify-center mb-3">
+          <div className="text-center py-12 bg-white rounded-xl border border-neutral-200 border-dashed">
+            <div className="mx-auto h-12 w-12 text-neutral-400 bg-neutral-50 rounded-full flex items-center justify-center mb-3">
                 <FileText className="h-6 w-6" />
             </div>
-            <h3 className="text-lg font-medium text-gray-900">No articles yet</h3>
-            <p className="text-gray-500 mt-1">Get started by creating your first post.</p>
+            <h3 className="text-lg font-medium text-neutral-900">No articles yet</h3>
+            <p className="text-neutral-500 mt-1">Get started by creating your first post.</p>
           </div>
         ) : (
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -82,10 +82,10 @@ export default function NewsListPage() {
               <div 
                 key={item.id} 
                 onClick={() => setSelectedArticle(item)}
-                className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col group"
+                className="bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col group"
               >
                 {/* Image Preview */}
-                <div className="h-40 bg-gray-100 relative">
+                <div className="h-40 bg-neutral-100 relative">
                   {item.imageUrl ? (
                     <img 
                       src={item.imageUrl} 
@@ -93,7 +93,7 @@ export default function NewsListPage() {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center text-gray-400">
+                    <div className="w-full h-full flex items-center justify-center text-neutral-400">
                       <ImageIcon className="h-8 w-8" />
                     </div>
                   )}
@@ -104,23 +104,23 @@ export default function NewsListPage() {
 
                 {/* Body */}
                 <div className="p-4 flex-1 flex flex-col">
-                  <h3 className="font-semibold text-gray-900 line-clamp-2 mb-2" title={item.title}>
+                  <h3 className="font-semibold text-neutral-900 line-clamp-2 mb-2" title={item.title}>
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-500 line-clamp-3 mb-4 flex-1">
+                  <p className="text-sm text-neutral-500 line-clamp-3 mb-4 flex-1">
                     {item.excerpt || "No excerpt..."}
                   </p>
                   
-                  <div className="flex items-center gap-2 text-xs text-gray-400 mb-4">
+                  <div className="flex items-center gap-2 text-xs text-neutral-400 mb-4">
                     <Calendar className="h-3 w-3" />
                     {format(item.publishedAt, "MMM d, yyyy")}
                   </div>
 
                   {/* Footer Actions */}
-                  <div className="flex items-center gap-2 mt-auto pt-3 border-t border-gray-100">
+                  <div className="flex items-center gap-2 mt-auto pt-3 border-t border-neutral-100">
                     <Link
                       href={`/admin/news/${item.id}`}
-                      className="flex-1 flex items-center justify-center gap-2 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
+                      className="flex-1 flex items-center justify-center gap-2 py-2 text-sm font-medium text-neutral-600 hover:bg-neutral-50 rounded-lg transition-colors"
                     >
                       <Edit2 className="h-4 w-4" />
                       Edit

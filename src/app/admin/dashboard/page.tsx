@@ -45,7 +45,7 @@ export default function AdminDashboard() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-center gap-4">
-                <div className="h-12 w-12 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600">
+                <div className="h-12 w-12 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600">
                     <Newspaper className="h-6 w-6" />
                 </div>
                 <div>

@@ -98,7 +98,7 @@ export function NewsDetailView({ article, onClose }: NewsDetailViewProps) {
             )}
 
             {/* Markdown Content (Matched Styles) */}
-            <div className="prose prose-indigo prose-lg max-w-none">
+            <div className="prose prose-orange prose-lg max-w-none">
                  <ReactMarkdown
                     components={{
                         h1: ({node, ...props}) => <h1 className="text-gray-900 text-3xl font-bold mb-4 mt-8" {...props} />,
@@ -109,8 +109,8 @@ export function NewsDetailView({ article, onClose }: NewsDetailViewProps) {
                         ol: ({node, ...props}) => <ol className="list-decimal ml-6 mb-6 space-y-2 text-gray-800" {...props} />,
                         li: ({node, ...props}) => <li className="pl-1" {...props} />,
                         strong: ({node, ...props}) => <strong className="text-gray-900 font-bold" {...props} />,
-                        blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-indigo-500 pl-4 py-2 my-8 italic bg-indigo-50 text-indigo-900 rounded-r-lg" {...props} />,
-                        a: ({node, ...props}) => <a className="text-indigo-600 hover:text-indigo-800 underline font-medium" {...props} />,
+                        blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-orange-500 pl-4 py-2 my-8 italic bg-orange-50 text-orange-900 rounded-r-lg" {...props} />,
+                        a: ({node, ...props}) => <a className="text-orange-600 hover:text-orange-800 underline font-medium" {...props} />,
                     }}
                 >
                     {article.content}

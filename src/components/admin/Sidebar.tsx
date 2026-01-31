@@ -46,16 +46,16 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
       {/* Sidebar Content */}
       <div className={clsx(
-        "bg-gray-900 border-r border-gray-800 text-gray-100",
+        "bg-neutral-900 border-r border-neutral-800 text-neutral-100",
         "flex flex-col h-full w-64",
         "fixed md:static inset-y-0 left-0 z-40",
         "transition-transform duration-300 ease-in-out",
         !isOpen && "-translate-x-full md:translate-x-0"
       )}>
         {/* Brand */}
-        <div className="flex items-center gap-3 px-6 h-16 border-b border-gray-800 shrink-0">
-          <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-              <Image src="/assets/pht.png" width={24} height={24} alt="PHT" />
+        <div className="flex items-center gap-3 px-6 h-16 border-b border-neutral-800 shrink-0">
+          <div className="h-8 w-8 bg-black rounded-lg flex items-center justify-center">
+              <Image src="/images/pht-logo.png" width={24} height={24} alt="PHT" />
           </div>
           <span className="font-bold text-xl tracking-wide">PHT Admin</span>
           
@@ -77,11 +77,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               className={clsx(
                 "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
                 isActive
-                  ? "bg-indigo-600/10 text-indigo-400"
-                  : "text-gray-400 hover:bg-gray-800 hover:text-white"
+                  ? "bg-orange-600/10 text-orange-400"
+                  : "text-neutral-400 hover:bg-neutral-800 hover:text-white"
               )}
             >
-              <item.icon className={clsx("h-5 w-5", isActive ? "text-indigo-400" : "text-gray-500")} />
+              <item.icon className={clsx("h-5 w-5", isActive ? "text-orange-400" : "text-neutral-500")} />
               {item.name}
             </Link>
           );
@@ -89,7 +89,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       </nav>
 
       {/* Footer */}
-      <div className="p-4 border-t border-gray-800 shrink-0">
+      <div className="p-4 border-t border-neutral-800 shrink-0">
         <button
             onClick={signOut}
             className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-sm font-medium text-red-400 hover:bg-red-400/10 transition-colors"
@@ -97,7 +97,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <LogOut className="h-5 w-5" />
             Sign Out
         </button>  
-        <div className="mt-4 px-3 text-xs text-gray-600">
+        <div className="mt-4 px-3 text-xs text-neutral-600">
           v1.0.0 &copy; Phoenix Token
         </div>
       </div>

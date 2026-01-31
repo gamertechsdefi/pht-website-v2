@@ -56,7 +56,7 @@ export default function NewsListPage() {
           <p className="text-gray-500 text-sm">Manage your blog posts and announcements.</p>
           <Link 
             href="/admin/news/create"
-            className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+            className="flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
           >
             <Plus className="h-4 w-4" />
             Create Article
@@ -66,7 +66,7 @@ export default function NewsListPage() {
         {/* Content */}
         {loading ? (
           <div className="flex justify-center py-12">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600" />
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600" />
           </div>
         ) : news.length === 0 ? (
           <div className="text-center py-12 bg-white rounded-xl border border-gray-200 border-dashed">

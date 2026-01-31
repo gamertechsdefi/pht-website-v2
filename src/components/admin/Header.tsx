@@ -27,7 +27,7 @@ export function AdminHeader({ title }: { title: string }) {
                     className="h-9 w-9 rounded-full bg-gray-100 border border-gray-200"
                 />
             ) : (
-                <div className="h-9 w-9 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                <div className="h-9 w-9 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
                     {user?.email?.[0].toUpperCase()}
                 </div>
             )}
